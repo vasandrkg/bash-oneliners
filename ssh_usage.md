@@ -1,4 +1,4 @@
-# Force to use password and not ssh-key to connect to host
+# Force to use password and not ssh key to connect to host
 ```bash
 ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
