@@ -1,28 +1,28 @@
-# Force to use password and not ssh key to connect to host
+## Force to use password and not ssh key to connect to host
 ```bash
 ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
 ```
 
-# Provide pathword on the command line
+## Provide pathword on the command line
 ```bash
 sshpass -p "some_pass" ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
 ```
 
-# Provide pathword from the text file
+## Provide pathword from the text file
 ```bash
 sshpass -f ~/.ssh/some_file_with_pathword.txt ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
 ```
 
-# Generate ssh key pair for some_user
+## Generate ssh key pair for some_user
 ```bash
 ssh-keygen -t rsa -b 4096 -C "some_user@some_domain.com" -f some_user_ssh_key;
 
 ```
 
-# Copy ssh public key for some_user to some_host
+## Copy ssh public key for some_user to some_host
 ```bash
 ssh-copy-id -i ~/.ssh/some_user_ssh_key.pub some_user@some_host;
 
