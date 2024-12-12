@@ -1,1 +1,1 @@
-# bash-shortcuts
+# bash-oneliners
