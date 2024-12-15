@@ -4,14 +4,16 @@ ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@so
 
 ```
 
-### Provide pathword on the command line
+### Provide pathword directly from the command line
 ```bash
+sudo apt-get update && sudo apt-get install sshpass;
 sshpass -p "some_pass" ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
 ```
 
 ### Provide pathword from the text file
 ```bash
+sudo apt-get update && sudo apt-get install sshpass;
 sshpass -f ~/.ssh/some_file_with_pathword.txt ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no some_user@some_host;
 
 ```
